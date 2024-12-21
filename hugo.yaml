@@ -1,0 +1,160 @@
+baseURL: https://garai.ca
+
+languageCode: en-us
+
+title: Orko Garai
+
+copyright: © 2024 Orko Garai
+
+googleAnalytics:
+
+pagination:
+  pagerSize: 4
+  # Specify the number of posts listed at home page
+
+theme: minima
+# Specify a theme to use
+
+defaultContentLanguage: en
+# Specify the default language
+
+# languages:
+# # Override language-specific configurations
+#   en:
+#     languageName: EN
+#     weight: 1
+
+params:
+# Define regular configurations
+
+  greet: Hi! I'm Orko
+  
+  subtitle:
+  
+  switch: ["🌘", "☀️"]
+  
+  defaultTheme: system
+  # Specify the default color theme, available values: light, sand, rock, system.
+
+  displayDate: true
+
+  displayDescription: true
+
+  selectable: true
+
+  author:
+    name: Orko Garai
+    # status: Currently living on Earth 🌍
+    avatar: https://avatars.githubusercontent.com/u/2949572?v=4
+    description: |
+      I am a human software engineer at [Igalia](https://igalia.com), working
+      on [chromium](https://chromium.org), the open source browser engine that
+      powers Google Chrome.
+
+  social:
+    # - name: "twitter"
+    #   url: "https://x.com/OrkoGarai"
+    - name: "github"
+      url: "https://github.com/ogarai"
+    - name: "linkedin"
+      url: "https://www.linkedin.com/in/orko-garai/"
+    - name: "mastodon"
+      url: "https://mastodon.social/@orko_garai"
+    - name: "email"
+      url: "mailto:contact@garai.ca"
+    - name: "rss"
+      url: "index.xml"
+
+  math:
+    enable: true
+    provider: katex
+
+  diagram:
+    enable: true
+    provider: mermaid
+
+  comment:
+    enable: false
+    # provider: giscus
+
+    # disqus:
+    # # See also https://disqus.com
+    #   shortname: hugo-minima
+
+    # utterances:
+    # # See also https://utteranc.es
+    #   repo: mivinci/hugo-theme-minima
+    #   issueTerm: pathname
+    #   label: comment
+
+    # giscus: 
+    # # See also https://giscus.app
+    #   repo: mivinci/hugo-theme-minima
+    #   repoId: MDEwOlJlcG9zaXRvcnkzODcxMjM2NDU=
+    #   category: Comments
+    #   categoryId: DIC_kwDOFxMJvc4CScQm
+    #   mapping: pathname
+    #   inputPosition: buttom # bottom | top
+    #   reactions: true
+    #   metadata: false
+
+  search:
+    enable: true
+    provider: fuse
+    title: Search
+    placeholder: Enter keywords
+
+    fuse:
+    # See also https://fusejs.io
+      keys:
+        - title
+        - permalink
+        - summary
+        - tags
+        - content
+      distance: 100
+      location: 0
+      threshold: 0.6
+      ignoreLocation: false
+      isCaseSensitive: false
+      includeScore: false
+      includeMatches: false
+      minMatchCharLength: 1
+      shouldSort: true
+      findAllMatches: false
+
+menu:
+  main:
+    - identifier: home
+      name: Home
+      weight: 1
+    - identifier: tags
+      name: Tags
+      weight: 2
+    - identifier: series
+      name: Series
+      weight: 3
+    - identifier: search
+      name: 🔍
+      weight: 4
+
+taxonomies:
+  category: categories
+  tag: tags
+  series: series
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
+
+markup:
+# **DO NOT EDIT** anything below. 
+# Because unlike other Hugo themes, the way Minima uses to do syntax
+# highlighting depends strongly on configurations below, so that the
+# color theme of code blocks changes with the blog color theme, instead
+# of being static like you may have seen on other Hugo themes.
+  highlight:
+    lineNos: true
+    noClasses: false
