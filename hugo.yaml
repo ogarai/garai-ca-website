@@ -150,6 +150,11 @@ outputs:
     - JSON
 
 markup:
+  goldmark:
+    parser:
+      attribute:
+        block: true
+        title: true
 # **DO NOT EDIT** anything below. 
 # Because unlike other Hugo themes, the way Minima uses to do syntax
 # highlighting depends strongly on configurations below, so that the

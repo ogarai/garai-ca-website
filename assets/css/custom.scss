@@ -8,3 +8,8 @@
   animation: 1s step-end 0s infinite normal none running blink;
 }
 
+.img-decorated {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
