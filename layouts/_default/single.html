@@ -3,7 +3,7 @@
   <h1 class="text-4xl font-extrabold mt-6 mb-6">{{ .Title }} <span class="cursor">|</span></h2></h1>
   <div class="mb-3 text-sm flex justify-between ">
     <div>
-      {{ if .Site.Params.displayDate }}
+      {{ if and .Site.Params.displayDate (not .Params.hideDate) }}
       &mdash; {{ .Date | time.Format (T "timeformat") }}
       {{ end }}
       {{ if .Draft }}
